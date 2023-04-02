@@ -29,8 +29,6 @@ It includes tutorials and best practices for data management, as well as tools f
 
 7 - After the installation is complete, the addon will be available for use in your Odoo instance.
 
-### Thank you for using Odoo Data Guide!
-
 ## Usage
 
 To use Odoo Data Guide, follow these steps:
@@ -51,4 +49,4 @@ For more information about the LGPL, please see the official license text.
 
 Note that while the LGPL does not require you to release your source code if you modify and distribute the software, it does require you to provide a way for users to obtain the corresponding source code. This can be done by providing a link to the source code or including it with the distributed software.
 
-Thank you for using Odoo Data Guide!
+#### Thank you for using Odoo Data Guide!
