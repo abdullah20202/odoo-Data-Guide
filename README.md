@@ -35,11 +35,14 @@ It includes tutorials and best practices for data management, as well as tools f
 
 To use Odoo Data Guide, follow these steps:
 
-in this example will contorol product data from code in odoo version 15
+in this example we will Control product data from XML code in odoo version 15
 
-1 - create new product in product.template module with all possibility to deal with data from XML file exist in ./data/product.xml
+1 - create new product in product.template module 
+with all possibility to deal with data from XML 
+the file exist in ./data/product.xml
 
 * contain Special Patterns for X2Many(One2many, Many2Many)
+
 
 ## License
 Odoo Data Guide is licensed under the Lesser General Public License (LGPL), which is a permissive open-source software license. The LGPL allows you to use, modify, and distribute the software for both commercial and non-commercial purposes, as long as any modifications to the software are released under the same license.
