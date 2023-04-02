@@ -1,13 +1,16 @@
 <odoo>
   <data>
-    <record id="demo_product_1" model="product.template">
+
+    <record id="demo_tax_id_1" model="account.tax">
+      <field name="name">Sales Tax 2</field>
+    </record>
+
+    <record id=">demo_product_1" model="product.template">
       <!-- Regular field  -->
       <field name="name">Demo Product 1</field>
 
-
       <!-- Boolean field  -->
       <field name="purchase_ok">False</field>
-
 
       <!-- Selection field  -->
       <field name="detailed_type">service</field>
@@ -15,31 +18,52 @@
       <!-- Image field  -->
       <field name="image_1920" type="base64" file="odoo_data_guide/static/src/img/demo.png" />
 
-
       <!-- Complex fields for Many2one  -->
 
       <!-- 1-  with by xml_id  we use ref -->
       <field name="categ_id" ref="product.product_category_1"></field>
 
-
       <!-- 2 - with by database_id  we use ref -->
       <field name="categ_id">1</field>
 
-
       <!-- Complex fields for X2Many (One2many , Many2many)  -->
-      <!-- the first 2 following cannot be used on One2Many and can't be used in create()  -->
     
-      <!-- 1-  5 Removes all records from set ,  -->
+      <!-- 5 Removes all records from set ,
+         cannot be used on One2Many and can't be used in create() -->
+      <!-- Clear -->
       <field name="taxes_id" eval="[(5,0,0)]"></field>
 
+      <!-- 4 Adds an existing record of id from the set , cannot be used on One2Many -->
+          <!-- Link -->
+      <field name="taxes_id" eval="[(4,1,0)]"></field>
 
+      <!-- 6 Replaces all existing records in the set by new ids list ,
+         equivalent to using the command 5 followed by a command 4 for each id in ids,
+        cannot be used One2many  -->
+      
+        <field name="taxes_id"
+        eval="[(6,0,[ref('odoo_data_guide.demo_tax_id_1'),1])]"></field>
+    
+      <!-- 3 Removes the record of id from the set ,but dos not delete it ,
+         cannot be used on One2Many and can't be used in create() -->
+          <!-- Unlink -->
+          <field name="taxes_id" eval="[(3,ref('odoo_data_guide.demo_tax_id_1'),0)]"></field>    
 
+      <!-- 2 Removes the record of id from the set ,Then deleted it (from the database) ,
+         cannot be used on One2Many and can't be used in create() -->
+          <!-- Delete -->
+          <field name="taxes_id" eval="[(2,ref('odoo_data_guide.demo_tax_id_1'),0)]"></field>    
 
-      <!-- 6 will replace all existing records in the set by new ids list -->
-      <!-- <field name="taxes_id"
-        eval="[(6,0,[ref('looped_business_1')]),(6,0,[ref('looped_business_2')])]"></field> -->
+      <!-- 1 Updates an existing record of id with the values in dict ,
+         can't be used in create() -->
+          <!-- Update with new one -->
+          <field name="taxes_id" eval="[(1,1,{'name':'Second taxes id'})]"></field>    
 
+      <!-- 0 Add a new record created from the provided vslue dict ,
+         can't be used in create() -->
+          <!-- Update with new one -->
+          <field name="taxes_id" eval="[(0,0,{'name':'third taxes id'})]"></field>    
 
-    </record>
+      </record>
   </data>
 </odoo>
