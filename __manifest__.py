@@ -3,11 +3,10 @@
     'name': "Odoo Data Guide",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        in this example will monubliate product data from code in odoo version 15""",
 
     'description': """
-        Long description of module's purpose
+        contain * Special Patterns for X2Many(One2many, Many2Many)
     """,
 
     'author': "Abdullah",
@@ -17,7 +16,7 @@
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Uncategorized',
-    'version': '0.1',
+    'version': '15.1',
 
     # any module necessary for this one to work correctly
     'depends': ['base','sale_management'],
