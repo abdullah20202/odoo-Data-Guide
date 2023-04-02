@@ -3,6 +3,7 @@
 
     <record id="demo_tax_id_1" model="account.tax">
       <field name="name">Sales Tax 2</field>
+      
     </record>
 
     <record id=">demo_product_1" model="product.template">
