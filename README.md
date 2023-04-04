@@ -39,6 +39,8 @@ in this example we will Control product data from XML code in odoo version 15
 with all possibility to deal with data from XML 
 the file exist in ./data/product.xml
 
+2 - module that contains all type of data in odoo and with views to show all those fields 
+
 * contain Special Patterns for X2Many(One2many, Many2Many)
 
 
