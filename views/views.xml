@@ -1,0 +1,101 @@
+<odoo>
+    <data>
+
+        <!-- Form view -->
+        <record model="ir.ui.view" id="my_module_model_form_view">
+            <field name="name">my.module.model.form</field>
+            <field name="model">my.module.model</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="boolean_field"/>
+                            <field name="integer_field"/>
+                            <field name="float_field"/>
+                            <field name="char_field"/>
+                            <field name="text_field"/>
+                            <field name="date_field"/>
+                            <field name="datetime_field"/>
+                            <field name="binary_field"/>
+                            <field name="selection_field"/>
+                            <field name="reference_field"/>
+                            <field name="html_field"/>
+                            <field name="image_field"/>
+                            <field name="attachment_field"/>
+                            <field name="monetary_field"/>
+                            <field name="many2one_field"/>
+                            <field name="one2many_field">
+                                <tree>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                            <field name="many2many_field"/>
+                            <field name="related_field"/>
+                            <field name="computed_field"/>
+                            <field name="encrypted_field"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree view -->
+        <record model="ir.ui.view" id="my_module_model_tree_view">
+            <field name="name">my.module.model.tree</field>
+            <field name="model">my.module.model</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="boolean_field"/>
+                    <field name="integer_field"/>
+                    <field name="float_field"/>
+                    <field name="char_field"/>
+                    <field name="text_field"/>
+                    <field name="date_field"/>
+                    <field name="datetime_field"/>
+                    <field name="binary_field"/>
+                    <field name="selection_field"/>
+                    <field name="reference_field"/>
+                    <field name="html_field"/>
+                    <field name="image_field"/>
+                    <field name="attachment_field"/>
+                    <field name="monetary_field"/>
+                    <field name="many2one_field"/>
+                    <field name="related_field"/>
+                    <field name="computed_field"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search view -->
+        <record model="ir.ui.view" id="my_module_model_search_view">
+            <field name="name">my.module.model.search</field>
+            <field name="model">my.module.model</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="boolean_field"/>
+                    <field name="integer_field"/>
+                    <field name="float_field"/>
+                    <field name="char_field"/>
+                    <field name="text_field"/>
+                    <field name="date_field"/>
+                    <field name="datetime_field"/>
+                    <field name="selection_field"/>
+                    <field name="reference_field"/>
+                    <field name="many2one_field"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="my_module_model_action">
+            <field name="name">My Module Model</field>
+            <field name="res_model">my.module.model</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu item -->
+        <menuitem id="my_module_menu" name="My Module" sequence="10"/>
+        <menuitem id="my_module_model_menu" name="My Module Model" parent="my_module_menu" action="my_module_model_action"/>
+        
+    </data>
+</odoo>
